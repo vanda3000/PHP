@@ -7,13 +7,14 @@ park(vehicle) — припарковать, вернуть true/false.
 retrieve(license) — убрать машину по номеру, вернуть true/false.
 */
 
+<?php
 class ParkingLot {
   public $size;
-	public $spots;
+  public $spots;
   
   public function __construct($size) {
     $this->size = $size;
-		$this->spots =  array_fill(0, $size, null);
+	$this->spots =  array_fill(0, $size, null);
   }
   
   public function park(Vehicle $vehicle): bool {
@@ -45,8 +46,8 @@ class ParkingLot {
   
   public function retrieve(string $license): bool {
     $leaving = false;
-		$numb_spot=-1;
-		for ($i=0; $i<$this->size; $i++){
+	$numb_spot=-1;
+	for ($i=0; $i<$this->size; $i++){
       if ($this->spots[$i] !== null && $this->spots[$i]->license === $license){
 				$numb_spot = $i;
 				break;
@@ -67,3 +68,4 @@ class ParkingLot {
     return true;
   }
 }
+?>
