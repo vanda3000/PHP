@@ -8,7 +8,7 @@ $c->decode('BFKKQJX'); // returns 'WAFFLES'
 If something in the string is not in the alphabet (e.g. punctuation, spaces), simply leave it as is.
 The shift will always be in range of [1, 26].
 */
-
+<?php
 class CaesarCipher{
 	public $shift;
 	public function __construct($shift){
@@ -43,6 +43,6 @@ class CaesarCipher{
 		}
 		return $string;
 	}
-	
 
 }
+?>
